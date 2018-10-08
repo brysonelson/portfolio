@@ -8,9 +8,11 @@ $(function navScrollStart(){
         if(scroll > os + ht -100){
             $('#nav-bar').addClass('scroll-color');
             $('.nav-item, .navbar-brand').addClass('nav-item-scroll');
+            $("#footer-text-div").css("display", "block");
         } else {
             $('#nav-bar').removeClass('scroll-color');
             $('.nav-item, .navbar-brand').removeClass('nav-item-scroll');
+            $("#footer-text-div").css("display", "block");
         }
 
         navScrollStart.navScroll = navScroll;

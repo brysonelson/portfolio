@@ -367,6 +367,7 @@ footer {
 
 #footer-text-div {
     height: 100%;
+    display: none;
 }
 
 #footer-text {

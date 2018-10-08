@@ -28,10 +28,12 @@ $(function(){
             $('#header-text').addClass('scroll-disappear');
             $("footer").addClass("footer-scroll");
             $("#down-arrow").css("display", "none")
+            $("#footer-text-div").css("display", "block");
         } else {
             $('#header-text').removeClass('scroll-disappear');
             $("footer").removeClass("footer-scroll");
             $("#down-arrow").css("display", "block")
+            $("#footer-text-div").css("display", "none");
         }
     });
 });

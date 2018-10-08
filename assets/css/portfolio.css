@@ -346,4 +346,10 @@
 
 footer {
     height: 3%;
+    display: block;
+}
+
+#footer-text-div {
+    height: 100%;
+    display: block;
 }
