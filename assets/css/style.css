@@ -9,6 +9,12 @@ html, body, .container-fluid {
     margin: auto;
 }
 
+nav {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none;
+}
+
 .navbar {
     height: 8%;
     font-weight: bold;
@@ -52,12 +58,12 @@ html, body, .container-fluid {
 }
 
 .scroll-disappear {
-    opacity: 0;
+    opacity: 0 !important;
     transition: .5s;
 }
 
 .footer-scroll {
-    height: 3%;
+    height: 0;
     margin-top: 0px;
     transition: .5s;
 }
@@ -96,6 +102,10 @@ html, body, .container-fluid {
     margin: auto;
     text-align: center;
     color: black;
+}
+
+.socials {
+    font-size: 30px;
 }
 
 .body-content {
@@ -206,7 +216,7 @@ html, body, .container-fluid {
     width: 50vw;
     height: 50vw;
     margin: auto;
-    background: #eb774c;
+    background: #74b6b5;
     position: absolute;
     overflow: hidden;
     z-index: 0;
@@ -225,7 +235,7 @@ html, body, .container-fluid {
     width: 20vw;
     height: 20vw;
     margin: auto;
-    background: #74b6b5;
+    background: #eb774c;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -337,6 +347,11 @@ html, body, .container-fluid {
     height: 5vw;
 }
 
+#home-top-space {
+    height: 10vh;
+    background: white !important;
+}
+
 .body-content-text {
     width: 60%;
     margin: auto;
@@ -358,6 +373,13 @@ html, body, .container-fluid {
     color: white;
 }
 
+/* #app {
+    height: 10vh !important;
+    float: right !important;
+    position: absolute !important;
+    bottom: 100px !important;
+} */
+
 footer {
     background: #1c3750;
     color: white;
@@ -367,9 +389,12 @@ footer {
 
 #footer-text-div {
     height: 100%;
-    display: none;
 }
 
 #footer-text {
     height: 100%;
 }
+
+
+
+

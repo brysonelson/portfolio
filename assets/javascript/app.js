@@ -1,3 +1,5 @@
+//====================== scroll event for the nav and header ========================
+
 $(function navScrollStart(){
     $(window).scroll(function navScroll() {
         var scroll = $(window).scrollTop(); // how many pixels you've scrolled
@@ -27,17 +29,19 @@ $(function(){
         if(scroll > os - (os-40)){
             $('#header-text').addClass('scroll-disappear');
             $("footer").addClass("footer-scroll");
-            $("#down-arrow").css("display", "none")
+            $("#down-arrow").addClass('scroll-disappear');
             $("#footer-text-div").css("display", "block");
         } else {
             $('#header-text').removeClass('scroll-disappear');
             $("footer").removeClass("footer-scroll");
-            $("#down-arrow").css("display", "block")
-            $("#footer-text-div").css("display", "none");
+            $("#down-arrow").removeClass('scroll-disappear');
+            $("#footer-text-div").css("display", "block");
         }
     });
 });
 
+
+//================= hovering on the shapes on the screen ===================
 $("#content-1-diamond").hover(function() {
     $("#content-1-shape").addClass("content-1-shape-hover");
 }, function() {
@@ -56,6 +60,12 @@ $("#content-3-diamond").hover(function() {
     $("#content-3-shape").removeClass("content-3-shape-hover");
 });
 
+$("#content-3-diamond").on("click", function() {
+    $('#contactModal').modal('show');
+})
+
+//======================== clicking the down arrow animation ===============
+
 $("#down-arrow").on("click", function() {
     event.preventDefault();
     var aTag = $("#down-arrow").attr("href")
@@ -65,6 +75,33 @@ $("#down-arrow").on("click", function() {
     $("html, body").animate({scrollTop: offset.top - 70}, 500);
 })
 
-$("#content-3-diamond").on("click", function() {
-    $('#contactModal').modal('show');
+
+
+// ======== social icon scrolling with waypoint and semantic ===============
+$(document).ready(function() {
+$("#home-top-space").waypoint(function(direction) {
+    if (direction === "down") {
+            $('.sequenced.socials .social')
+                .transition({
+                    animation: 'scale',
+                    reverse: 'auto', // default setting
+                    interval: 250,
+                    duration: 500
+                })
+                ;
+            console.log("test");
+        }
+}, {
+    offset: '75%' 
+});
 })
+
+
+//=========== materialize bottom hover button =============
+$(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+    var instances = M.FloatingActionButton.init(elems, {
+        direction: 'top',
+        hoverEnabled: true,
+    });
+});

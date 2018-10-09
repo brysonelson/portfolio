@@ -9,10 +9,12 @@ $(function navScrollStart(){
             $('#nav-bar').addClass('scroll-color');
             $('.nav-item, .navbar-brand').addClass('nav-item-scroll');
             $("#footer-text-div").css("display", "block");
+            $("footer").addClass("hidden");
         } else {
             $('#nav-bar').removeClass('scroll-color');
             $('.nav-item, .navbar-brand').removeClass('nav-item-scroll');
             $("#footer-text-div").css("display", "block");
+            $("footer").removeClass("hidden");
         }
 
         navScrollStart.navScroll = navScroll;
@@ -33,3 +35,21 @@ $(function(){
         }
     });
 });
+
+
+$(document).ready(function(){
+    $('#menu').hover(function() {
+        $('.tap-target').tapTarget();
+        $('.tap-target').tapTarget('open');
+    }, function() {
+        // $('.tap-target').tapTarget();
+        // $('.tap-target').tapTarget('close');
+    });
+    // $('#menu').click(function() {
+    //     var elems = document.querySelectorAll('.tap-target');
+    //     var instances = M.TapTarget.init(elems);
+    //     var instance = M.TapTarget.getInstance(elems);
+    //     instance.open();
+    //     console.log("test");
+    // });
+  });
