@@ -98,7 +98,7 @@
         rgba(0, 0, 0, 0.788),
         rgba(153, 151, 151, 0.014)
       ) ,url("../images/body-image.jpg");
-      transition: .5s;
+      transition: .5s ease-in-out;
 }
 
 /* #project-2:hover{
@@ -224,7 +224,7 @@
     position: absolute;
     top: 0;
     left: -10%;
-    transition: .5s;
+    transition: .5s ease;
 }
 
 #project-3:hover .project-text, #project-4:hover .project-text {
@@ -292,7 +292,7 @@
     position: absolute;
     top: 0;
     right: -5%;
-    transition: .5s;
+    transition: .5s ease;
 }
 
 #project-4:hover #project-4-logo {

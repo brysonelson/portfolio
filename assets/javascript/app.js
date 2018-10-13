@@ -72,25 +72,31 @@ $("#down-arrow").on("click", function() {
     var offset = $(aTag).offset();
     console.log(offset);
     //.offset().top;
-    $("html, body").animate({scrollTop: offset.top - 70}, 500);
+    $("html, body").animate({scrollTop: offset.top - 150}, 500);
 })
 
 
 
 // ======== social icon scrolling with waypoint and semantic ===============
+//create var called page loaded. set it to true. once waypoint is reached, change to false.
+//then in my if statement, if direction = down and page loaded = false, run function.
+var pageLoad = false;
+
 $(document).ready(function() {
 $("#home-top-space").waypoint(function(direction) {
-    if (direction === "down") {
-            $('.sequenced.socials .social')
-                .transition({
-                    animation: 'scale',
-                    reverse: 'auto', // default setting
-                    interval: 250,
-                    duration: 500
-                })
-                ;
-            console.log("test");
-        }
+    
+    if (direction === "down" && pageLoad == false) {
+        pageLoad = true;
+        $('.sequenced.socials .social')
+            .transition({
+                animation: 'scale',
+                reverse: 'auto', // default setting
+                interval: 250,
+                duration: 500
+        })
+        ;
+        console.log("test");
+    }
 }, {
     offset: '75%' 
 });
@@ -105,3 +111,18 @@ $(document).ready(function(){
         hoverEnabled: true,
     });
 });
+
+
+//===================== when you click about me page =================
+$("#about-me-head").click(function() {
+    event.preventDefault();
+    $("#about-page").css("top", "0");
+    document.body.style.overflow = "hidden";
+    console.log("test");
+})
+
+$("#about-exit").click(function() {
+    $("#about-page").css("top", "200vh");
+    document.body.style.overflow = "auto";
+    console.log("test");
+})

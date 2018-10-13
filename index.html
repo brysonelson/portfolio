@@ -23,14 +23,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto mr-5">
-            <a class="nav-item nav-link active" href="#">About <span class="sr-only">(current)</span></a>
+            <a id="about-me-head" class="nav-item nav-link active" href="#">About <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="./portfolio.html">Portfolio</a>
             <a data-toggle="modal" data-target="#contactModal" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div id="home-page" class="container-fluid">
 
 <!-- Header -->
         <header id="header-img">
@@ -44,11 +44,11 @@
         <div class="container" id="home-top-space">
             <div class="sequenced socials">
                 <div class="row">
-                <div class="pl-2 pt-3 col s4 offset-s4">
-                    <a class="social mr-3 hoverable social-icon hidden btn-floating btn-large waves-effect waves-light blue"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social mx-3 hoverable social-icon hidden btn-floating btn-large waves-effect waves-light black"><i class="fab fa-github"></i></a>
-                    <a class="social mx-3 hoverable social-icon hidden btn-floating btn-large waves-effect waves-light blue darken-4"><i class="fab fa-facebook-f"></i></a>
-                    <a class="social mx-3 hoverable social-icon hidden btn-floating btn-large waves-effect waves-light red"><i class="fab fa-twitter"></i></a>
+                <div class="pt-3 pl-1 col s4 offset-s4">
+                    <a class="social mr-3 hoverable social-icon btn-floating btn-large waves-effect waves-light blue transition hidden"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social mx-3 hoverable social-icon btn-floating btn-large waves-effect waves-light black transition hidden"><i class="fab fa-github"></i></a>
+                    <a class="social mx-3 hoverable social-icon btn-floating btn-large waves-effect waves-light blue darken-4 transition hidden"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social ml-3 mr-4 hoverable social-icon btn-floating btn-large waves-effect waves-light red transition hidden"><i class="fab fa-twitter"></i></a>
                     <!-- <a class="social social-icon"><i class="fab fa-linkedin-in"></i></a> -->
                 </div>
             </div>
@@ -66,10 +66,12 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="h-100 body-content-text" id="content-1-text">
-                        <h3><strong>About Me</strong></h3><br>
-                        <h4>Code. Travel. Sleep. Repeat.</h4><br>
-                        <p>I love to explore new ideas, places, and things! Coding has been a gateway into more than I could have imagined. I'm here to share my passion with the world!</p><br>
-                        <p>Click "About Me" on the left to learn more.</p>
+                        <div id="content-1-text-background">
+                            <h3><strong>About Me</strong></h3><br>
+                            <h4>Code. Travel. Sleep. Repeat.</h4><br>
+                            <p>I love to explore new ideas, places, and things! Coding has been a gateway into more than I could have imagined. I'm here to share my passion with the world!</p><br>
+                            <p>Click "About Me" on the left to learn more.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,17 +174,31 @@
 <div id="app">
     <div class="fixed-action-btn">
         <a class="btn-floating btn-large blue orange darken-2">
-            <i class="large material-icons">mode_edit</i>
+                <i class="far fa-address-book"></i>
         </a>
         <ul>
-            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-            <li><a class="btn-floating orange lighten-3"><i class="material-icons">format_quote</i></a></li>
-            <li><a class="btn-floating teal lighten-2"><i class="material-icons">publish</i></a></li>
-            <li><a class="btn-floating blue darken-4"><i class="material-icons">attach_file</i></a></li>
+            <li><a class="btn-floating red"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a class="btn-floating orange lighten-3"><i class="fab fa-github"></i></a></li>
+            <li><a class="btn-floating teal lighten-2"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="btn-floating blue darken-4"><i class="fab fa-twitter"></i></a></li>
         </ul>
     </div>
 </div>
 
+
+<div id="about-page">
+
+    <i id="about-exit" class="far fa-times-circle float-right my-5 mx-5"></i>
+
+    <div id="about-head">
+        <p id="about-head-text">About Me</p>
+    </div>
+
+    <div id="about-img-div">
+        <img>
+    </div>
+    
+</div>
 
 </div>
 
